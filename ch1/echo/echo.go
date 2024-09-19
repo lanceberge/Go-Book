@@ -1,6 +1,10 @@
 package main
 
-import "os"
+import (
+	"fmt"
+	"os"
+	"strings"
+)
 
 func main() {
 	s, sep := "", " "
@@ -8,4 +12,8 @@ func main() {
 		s += sep + arg
 		sep = " "
 	}
+}
+
+func alternative() {
+	fmt.Println(strings.Join(os.Args[1:], " "))
 }
